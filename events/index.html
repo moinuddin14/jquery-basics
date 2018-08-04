@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery Crash Course | Selectors</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div class="jumbotron jumbotron-fluid ">
+            <div class="container mr-3">
+                <h1 class="display-4">JQuery Events</h1>
+                <p class="lead">Let's together learn JQuery Events.</p>
+            </div>
+        </div>
+
+        <div id="container">
+            <h3>Mouse Events</h3>
+            <button id="btn1">Button 1</button>
+            <p class="para1">Praesent sit amet laoreet augue. Donec sed pretium magna. Sed pellentesque erat id dolor iaculis, eu semper ipsum
+                feugiat. Nulla lacinia, mi et dignissim rutrum, magna velit placerat libero, sed molestie turpis dui eget
+                mauris. Etiam at tellus id sapien blandit bibendum. Phasellus fringilla sem sed varius posuere. Proin egestas,
+                lacus et egestas dignissim, felis enim bibendum sem, vitae sagittis quam sapien ac enim. Sed eleifend magna
+                ac ante dignissim, quis condimentum dui elementum. Pellentesque malesuada porttitor tincidunt. Proin iaculis
+                congue velit sit amet aliquet. Proin justo risus, venenatis sed pellentesque eu, dignissim a enim. Donec
+                id erat ac nunc laoreet facilisis a ac quam. Cras sodales condimentum faucibus. Aliquam et volutpat ipsum,
+                vitae tempus nunc. Cras quis tincidunt erat, at sollicitudin purus.</p>
+            <button id="btn2">Button 2</button>
+            <p class="para2">Praesent sit amet laoreet augue. Donec sed pretium magna. Sed pellentesque erat id dolor iaculis, eu semper ipsum
+                feugiat. Nulla lacinia, mi et dignissim rutrum, magna velit placerat libero, sed molestie turpis dui eget
+                mauris. Etiam at tellus id sapien blandit bibendum. Phasellus fringilla sem sed varius posuere. Proin egestas,
+                lacus et egestas dignissim, felis enim bibendum sem, vitae sagittis quam sapien ac enim. Sed eleifend magna
+                ac ante dignissim, quis condimentum dui elementum. Pellentesque malesuada porttitor tincidunt. Proin iaculis
+                congue velit sit amet aliquet. Proin justo risus, venenatis sed pellentesque eu, dignissim a enim. Donec
+                id erat ac nunc laoreet facilisis a ac quam. Cras sodales condimentum faucibus. Aliquam et volutpat ipsum,
+                vitae tempus nunc. Cras quis tincidunt erat, at sollicitudin purus.</p>
+
+            <h1 class="hover"></h1>
+
+            <hr>
+            <form action="">
+                <label>Name</label>
+                <br>
+                <input type="text" id="name" name="name">
+                <br>
+                <label>Email</label>
+                <br>
+                <input type="text" id="email" name="email">
+                <br>
+                <label>Gender</label>
+                <br>
+                <select name="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <br>
+                <br>
+                <input type="submit" value="Submit"></input>
+            </form>
+        </div>
+    </div>
+    <script>
+        $('document').ready(() => {
+            // $('#btn2').click(() => alert('Button 2 Clicked!'));
+            // $('#btn2').on('click', () => console.log('Clicked...'));
+            // $('#btn1').click(() => {
+            //     $('p.para1').hide();
+            // });
+            // $('#btn1').click(() => $('#btn2').toggle());
+            // $('#btn2').dblclick(() => {
+            //     $('.para2').toggle();
+            // });
+            // $('#btn2').hover(() => {
+            //     $('.para2').toggle();
+            // });
+            // Hover is not an event, its a combination of mouseenter and mouseleave
+            // $('#btn2').mousemove(() => $('.para2').toggle());
+
+            // Passing Events
+            // $('#btn2').click(e => console.log(e.target.baseURI));
+
+            // Find co-ordinates with mouse move on the entire webpage
+            // $(document).mousemove(e => {
+            //     console.log(`Co-ord => X: ${e.clientX} Y: ${e.clientY}`);
+            // }); 
+            // Display co-ordinates within the webpage
+            // $(document).mousemove(e => {
+            //     $('.hover').html(`Co-ord X: ${e.clientX} Y: ${e.clientY}`);
+            // });
+
+            $('input:submit').focus(() => alert('Focus'));
+        });
+    </script>
+
+
+</body>
+
+</html>
